@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#todoapp {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+}
+
+#todoapp header {
+    background-color: #0078d4;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#todoapp input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+}
+
+#todoapp input[type="text"]:focus {
+    border-bottom: 1px solid #0078d4;
+}
+
+#taskList, #completedList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskList li, #completedList li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+#taskList li:last-child, #completedList li:last-child {
+    border-bottom: none;
+}
+
+#taskList li input[type="checkbox"], #completedList li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#taskList li span, #completedList li span {
+    flex-grow: 1;
+    margin-right: 10px;
+    color: #333;
+}
+
+#taskList li button, #completedList li button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#taskList li button:hover, #completedList li button:hover {
+    background-color: #c0392b;
+}
